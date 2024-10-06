@@ -60,15 +60,6 @@ public class PlayerMovement : MonoBehaviour
                 rigidBody.velocity = new Vector2(horizontalSpeed, verticalSpeed) * (speed / Mathf.Sqrt(2));
             }
         }
-
-
-        Vector3 scale = transform.localScale;
-        if (horizontalSpeed > 0) {
-            scale.x = -1;
-        } else if (horizontalSpeed < 0) {
-            scale.x = 1;
-        }
-        transform.localScale = scale;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

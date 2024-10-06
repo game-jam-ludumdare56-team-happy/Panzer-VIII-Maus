@@ -43,9 +43,9 @@ public class CheeseSpawner : MonoBehaviour
     {
         // Generates Random x between said coordinates
         // I don't know what the dimensions of our game is so please change numbers to fit dimensions
-        float randomXPos = Random.Range(-5f, 5f);
+        float randomXPos = transform.position.x + Random.Range(-5f, 5f);
         // Same as above but generates random y
-        float randomYPos = Random.Range(-5f, 5f);
+        float randomYPos = transform.position.y + Random.Range(-5f, 5f);
         // Creates vector w/ coords
         Vector2 randomPosition = new Vector2(randomXPos, randomYPos);
 

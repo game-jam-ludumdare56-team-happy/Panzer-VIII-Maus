@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private GameObject mouse;
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject enemy1;
+    [SerializeField] private GameObject enemy2;
 
     public float frequency = 0.5f;
     public float timeUntilSpawn;
@@ -42,7 +43,15 @@ public class EnemyController : MonoBehaviour
 
     private void SpawnEnemies() 
     {
-        GameObject enemyClone = Instantiate(enemy, SetStartLocation(), Quaternion.identity);
+        if (Random.Range(0,2) == 0) {
+            GameObject enemyClone0 = Instantiate(enemy1, SetStartLocation(), Quaternion.identity);
+        } else {
+            GameObject enemyClone1 = Instantiate(enemy2, SetStartLocation(), Quaternion.identity);
+            GameObject enemyClone2 = Instantiate(enemy2, SetStartLocation(), Quaternion.identity);
+            GameObject enemyClone3 = Instantiate(enemy2, SetStartLocation(), Quaternion.identity);
+            GameObject enemyClone4 = Instantiate(enemy2, SetStartLocation(), Quaternion.identity);
+        }
+        
     }
 
     private Vector3 SetStartLocation()
