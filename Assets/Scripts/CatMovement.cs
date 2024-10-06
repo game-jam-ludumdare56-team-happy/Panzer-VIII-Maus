@@ -12,7 +12,7 @@ public class CatMovement : MonoBehaviour {
         if ((target.transform.position.y) < (transform.position.y + 1f) & 
             (target.transform.position.y) > (transform.position.y - 1f)) {
                 speed = 10f;
-                Debug.Log("silly speed");
+                
         } else {
             speed = 3f;
         }
