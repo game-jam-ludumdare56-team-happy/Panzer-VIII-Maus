@@ -19,13 +19,5 @@ public class PlayerMovement : MonoBehaviour
         horizontalSpeed = Input.GetAxisRaw("Horizontal");
         verticalSpeed = Input.GetAxisRaw("Vertical");
         rigidBody.velocity = new Vector2(horizontalSpeed, verticalSpeed).normalized * speed;
-
-        Vector3 scale = transform.localScale;
-        if (horizontalSpeed > 0) {
-            scale.x = -1;
-        } else if (horizontalSpeed < 0) {
-            scale.x = 1;
-        }
-        transform.localScale = scale;
     }
 }
